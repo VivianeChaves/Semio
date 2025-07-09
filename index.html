@@ -156,7 +156,7 @@
                 id: 'FCA, 48 anos, sexo feminino, professora, residente em Barbalha.',
                 qp: 'fraqueza há 4 meses',
                 hda: 'Paciente queixa-se de fraqueza e desânimo há aproximadamente 4 meses, o que tem prejudicado seu desempenho no trabalho e nas tarefas do dia a dia. Neste período notou também dispnéia aos esforços, ficando, por exemplo, muito cansada ao subir escadas.',
-                ef: 'PA = 120/80 mmHg FC = 90 bpm TA = 36,5oC. Fácies atípica, bom estado geral, mucosas hipocoradas (++/4+), hidratada, anictérica, acianótica, afebril. Linfonodos não palpáveis. Sem edemas. AP : murmúrio vesicular fisiológico. Ausência de ruídos adventícios. AC: ritmo regular, em 2T, bulhas normofonéticas, sem sopros. Abdome: normotenso, presença de massa palpável no hipogástrio, indolor, endurecida, móvel, com cerca de 6 cm de diâmetro. Fígado e baço não palpáveis.',
+                ef: 'PA = 120/80 mmHg FC = 90 bpm TA = 36,5oC. Fácies atípica, bom estado geral, mucosas hipocoradas (++/4+), hidratada, anictérica, acianótica, afebril. Linfonodos não palpáveis. Sem edemas. AP : murmúlio vesicular fisiológico. Ausência de ruídos adventícios. AC: ritmo regular, em 2T, bulhas normofonéticas, sem sopros. Abdome: normotenso, presença de massa palpável no hipogástrio, indolor, endurecida, móvel, com cerca de 6 cm de diâmetro. Fígado e baço não palpáveis.',
                 sections: [
                     {
                         title: 'Questão 1: Complementando a HDA',
@@ -466,24 +466,32 @@
                             {
                                 id: 'hypothesis-etiology-2',
                                 type: 'textarea',
-                                prompt: 'Formule a hipótese sindrômica completa e pesquise possíveis diagnósticos etiológicos para o caso apresentado, justificando a escolha.',
-                                keywords: ['linfoma', 'leucemia', 'mielofibrose', 'mononucleose', 'tuberculose', 'hiv', 'leishmaniose', 'esquistossomose'],
-                                feedback: `**Hipótese Sindrômica Principal:** Síndrome Linfoproliferativa/Mieloproliferativa (devido a linfadenopatias generalizadas, hepatoesplenomegalia e sintomas sistêmicos como fraqueza e adinamia).
+                                prompt: 'Pesquise sobre as principais etiologias para uma linfadenopatia associada a hepatoesplenomegalia.',
+                                keywords: ['linfoma', 'leucemia', 'mononucleose', 'tuberculose', 'hiv', 'leishmaniose', 'sarcoidose', 'doenças autoimunes', 'mielofibrose'],
+                                feedback: `As principais etiologias para uma linfadenopatia associada a hepatoesplenomegalia são diversas e podem ser agrupadas em:
 
-                                **Possíveis Diagnósticos Etiológicos (para pesquisa e justificativa):**
-                                - **Neoplasias Hematológicas:**
-                                    - **Linfomas (Hodgkin e Não-Hodgkin):** São as principais causas de linfadenopatias generalizadas e hepatoesplenomegalia, frequentemente associadas a sintomas B (febre, sudorese noturna, perda de peso) e adinamia.
-                                    - **Leucemias (Linfoides Crônicas, Mieloides Crônicas):** Podem cursar com linfadenopatias e hepatoesplenomegalia significativas, além de sintomas constitucionais.
-                                    - **Mielofibrose:** Caracterizada por esplenomegalia maciça e sintomas constitucionais, pode ser uma consideração.
-                                - **Doenças Infecciosas:**
-                                    - **Mononucleose Infecciosa:** Causa linfadenopatia e hepatoesplenomegalia, mas geralmente em pacientes mais jovens e com quadro agudo.
-                                    - **Tuberculose (formas disseminadas):** Pode causar linfadenopatias e esplenomegalia, com sintomas B.
-                                    - **HIV:** Pode apresentar linfadenopatia generalizada persistente e hepatoesplenomegalia.
-                                    - **Leishmaniose Visceral (Calazar):** Endêmica em algumas regiões, causa hepatoesplenomegalia maciça, febre, fraqueza e linfadenopatias.
-                                    - **Esquistossomose:** Em áreas endêmicas, pode levar à hepatoesplenomegalia.
-                                - **Doenças Autoimunes:** Sarcoidose (raro, mas pode causar linfadenopatias).
+                                **1. Neoplasias Hematológicas:**
+                                    * **Linfomas (Hodgkin e Não-Hodgkin):** São causas muito comuns. A linfadenopatia pode ser generalizada e a hepatoesplenomegalia é frequente, muitas vezes acompanhada de sintomas B (febre, sudorese noturna, perda de peso).
+                                    * **Leucemias (principalmente Leucemia Linfoide Crônica - LLC e Leucemia Mieloide Crônica - LMC):** Podem cursar com linfadenopatias e hepatoesplenomegalia significativas devido à infiltração de células malignas.
+                                    * **Mielofibrose Primária:** Uma neoplasia mieloproliferativa crônica que frequentemente causa esplenomegalia maciça e pode estar associada a linfadenopatias.
 
-                                **Observação:** A fraqueza e adinamia são sintomas inespecíficos, mas no contexto das linfadenopatias e hepatoesplenomegalia, sugerem uma doença sistêmica subjacente, sendo as hematológicas as mais prováveis, exigindo investigação aprofundada.`
+                                **2. Doenças Infecciosas:**
+                                    * **Mononucleose Infecciosa (EBV):** Causa linfadenopatia generalizada, hepatoesplenomegalia e fadiga, especialmente em jovens.
+                                    * **Tuberculose (formas disseminadas):** Pode levar a linfadenopatias múltiplas (incluindo cervicais) e hepatoesplenomegalia.
+                                    * **HIV:** A infecção pelo HIV pode causar linfadenopatia generalizada persistente e, em fases mais avançadas, hepatoesplenomegalia.
+                                    * **Leishmaniose Visceral (Calazar):** Endêmica em algumas regiões, é uma causa importante de hepatoesplenomegalia maciça, febre, anemia e linfadenopatias.
+                                    * **Esquistossomose:** Em áreas endêmicas, a forma hepatoesplênica da esquistossomose pode levar a hepatoesplenomegalia e, ocasionalmente, linfadenopatias reacionais.
+                                    * **Citomegalovírus (CMV), Toxoplasmose:** Podem causar quadros semelhantes à mononucleose, com linfadenopatia e hepatoesplenomegalia.
+
+                                **3. Doenças Autoimunes e Inflamatórias:**
+                                    * **Lúpus Eritematoso Sistêmico (LES), Artrite Reumatoide (especialmente Síndrome de Felty):** Podem cursar com linfadenopatias e, em alguns casos, esplenomegalia.
+                                    * **Sarcoidose:** Uma doença granulomatosa que pode afetar múltiplos órgãos, levando a linfadenopatias e, menos comumente, hepatoesplenomegalia.
+
+                                **4. Outras Causas:**
+                                    * **Amiloidose:** Depósito de proteínas anormais que pode afetar vários órgãos, incluindo fígado, baço e linfonodos.
+                                    * **Doenças de Depósito:** Como a Doença de Gaucher, que pode causar hepatoesplenomegalia e, por vezes, linfadenopatias.
+
+                                A investigação da causa subjacente é crucial e geralmente envolve exames laboratoriais, de imagem e, frequentemente, biópsia de linfonodo ou medula óssea.`
                             }
                         ]
                     }
