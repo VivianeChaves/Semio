@@ -350,27 +350,57 @@
                                 id: 'hda-pain',
                                 type: 'checkbox',
                                 prompt: 'Quais características da dor abdominal você investigaria para complementar a HDA?',
-                                options: ['Localização exata', 'Irradiação', 'Tipo (cólica, queimação, pontada)', 'Intensidade (escala de 0-10)', 'Fatores de melhora/piora (relação com alimentação, evacuação)', 'Sintomas associados (náuseas, vômitos, diarreia, constipação, alteração do hábito intestinal, melena, hematoquezia)'],
-                                correctAnswers: ['Localização exata', 'Irradiação', 'Tipo (cólica, queimação, pontada)', 'Intensidade (escala de 0-10)', 'Fatores de melhora/piora (relação com alimentação, evacuação)', 'Sintomas associados (náuseas, vômitos, diarreia, constipação, alteração do hábito intestinal, melena, hematoquezia)'],
-                                feedback: `A caracterização completa da dor abdominal é essencial para direcionar a investigação. A localização e irradiação podem indicar o órgão afetado. O tipo e a intensidade ajudam a diferenciar causas. A relação com alimentação ou evacuação, e sintomas associados, são pistas importantes para distúrbios gastrointestinais ou sistêmicos.`
+                                options: [
+                                    'Localização exata',
+                                    'Histórico de alergias alimentares', // Opção errada
+                                    'Irradiação',
+                                    'Cor da urina', // Opção errada
+                                    'Tipo (cólica, queimação, pontada)',
+                                    'Frequência cardíaca durante a dor', // Opção errada
+                                    'Intensidade (escala de 0-10)',
+                                    'Fatores de melhora/piora (relação com alimentação, evacuação)',
+                                    'Número de refeições diárias', // Opção errada
+                                    'Sintomas associados (náuseas, vômitos, diarreia, constipação, alteração do hábito intestinal, melena, hematoquezia)'
+                                ],
+                                correctAnswers: [
+                                    'Localização exata', 'Irradiação', 'Tipo (cólica, queimação, pontada)', 'Intensidade (escala de 0-10)',
+                                    'Fatores de melhora/piora (relação com alimentação, evacuação)', 'Sintomas associados (náuseas, vômitos, diarreia, constipação, alteração do hábito intestinal, melena, hematoquezia)'
+                                ],
+                                feedback: `A caracterização completa da dor abdominal é essencial para direcionar a investigação. A localização e irradiação podem indicar o órgão afetado. O tipo e a intensidade ajudam a diferenciar causas. A relação com alimentação ou evacuação, e sintomas associados, são pistas importantes para distúrbios gastrointestinais ou sistêmicos. Histórico de alergias alimentares, cor da urina, frequência cardíaca durante a dor e número de refeições diárias não são características diretas da dor abdominal a serem investigadas na HDA.`
                             },
                             {
                                 id: 'hda-nodules',
                                 type: 'checkbox',
                                 prompt: 'Quais perguntas sobre as nodulações cervicais são essenciais para a HDA?',
-                                options: ['Início e duração', 'Progressão do crescimento (rápido/lento)', 'Número de nodulações', 'Presença de dor', 'Consistência (macia, elástica, endurecida)', 'Mobilidade (fixa ou móvel)', 'Presença de outras nodulações em outras regiões do corpo'],
-                                correctAnswers: ['Início e duração', 'Progressão do crescimento (rápido/lento)', 'Número de nodulações', 'Presença de dor', 'Consistência (macia, elástica, endurecida)', 'Mobilidade (fixa ou móvel)', 'Presença de outras nodulações em outras regiões do corpo'],
-                                feedback: `A investigação das nodulações é crucial para diferenciar causas benignas de malignas. O crescimento rápido e a consistência endurecida/fixa podem sugerir malignidade. O presença de dor pode indicar inflamação. A busca por outras nodulações (linfadenopatias generalizadas) é vital para doenças sistêmicas como linfomas.`
+                                options: [
+                                    'Início e duração',
+                                    'Cor dos olhos', // Opção errada
+                                    'Progressão do crescimento (rápido/lento)',
+                                    'Histórico de vacinação', // Opção errada
+                                    'Número de nodulações',
+                                    'Presença de dor',
+                                    'Consistência (macia, elástica, endurecida)',
+                                    'Profissão dos pais', // Opção errada
+                                    'Mobilidade (fixa ou móvel)',
+                                    'Presença de outras nodulações em outras regiões do corpo'
+                                ],
+                                correctAnswers: [
+                                    'Início e duração', 'Progressão do crescimento (rápido/lento)', 'Número de nodulações', 'Presença de dor',
+                                    'Consistência (macia, elástica, endurecida)', 'Mobilidade (fixa ou móvel)', 'Presença de outras nodulações em outras regiões do corpo'
+                                ],
+                                feedback: `A investigação das nodulações é crucial para diferenciar causas benignas de malignas. O crescimento rápido e a consistência endurecida/fixa podem sugerir malignidade. A presença de dor pode indicar inflamação. A busca por outras nodulações (linfadenopatias generalizadas) é vital para doenças sistêmicas como linfomas. A cor dos olhos, histórico de vacinação e profissão dos pais não são informações relevantes para a caracterização das nodulações na HDA.`
                             },
                             {
                                 id: 'hda-systemic',
                                 type: 'textarea',
-                                prompt: 'Quais outros sintomas sistêmicos (como sintomas B) e exposições você investigaria?',
-                                keywords: ['febre', 'sudorese noturna', 'perda de peso', 'prurido', 'tosse', 'exposição química', 'radiação', 'infecções crônicas'],
-                                feedback: `É fundamental investigar:
-                                - **Sintomas B:** Febre (padrão, duração), sudorese noturna (intensa, que encharca a roupa), perda de peso involuntária (quantificar). Esses sintomas são clássicos de doenças linfoproliferativas.
-                                - **Outros sintomas sistêmicos:** Prurido (pode ser associado a linfomas), tosse, dispneia, saciedade precoce (devido à esplenomegalia).
-                                - **Exposição:** Histórico de exposição a agentes químicos, radiação (relacionado à ocupação de mecânico), infecções crônicas (tuberculose, HIV, hepatites), viagens (para áreas endêmicas de leishmaniose, esquistossomose).`
+                                prompt: 'Pesquise e descreva o que são os "Sintomas B".',
+                                keywords: ['febre', 'sudorese noturna', 'perda de peso'],
+                                feedback: `Os "Sintomas B" são um conjunto de sintomas sistêmicos importantes no contexto de doenças linfoproliferativas (como linfomas) e outras condições malignas ou inflamatórias. Eles incluem:
+                                - **Febre:** Geralmente inexplicável, persistente ou recorrente, que não está associada a infecções conhecidas.
+                                - **Sudorese noturna:** Sudoreses intensas durante a noite, que podem encharcar a roupa de cama.
+                                - **Perda de peso inexplicável:** Perda de mais de 10% do peso corporal em um período de 6 meses, sem dieta ou exercício.
+
+                                A presença desses sintomas é um fator prognóstico importante em doenças como o linfoma de Hodgkin e linfomas não-Hodgkin, e indica uma doença mais agressiva ou avançada.`
                             }
                         ]
                     },
@@ -381,17 +411,44 @@
                                 id: 'antecedents-medical-history',
                                 type: 'checkbox',
                                 prompt: 'Quais antecedentes médicos preexistentes são cruciais para a investigação deste caso?',
-                                options: ['Histórico de doenças hematológicas (anemias prévias, doenças da medula óssea)', 'Doenças infecciosas crônicas (tuberculose, HIV, hepatites)', 'Doenças autoimunes', 'Doenças oncológicas', 'Cirurgias anteriores (esplenectomia, abdominais)', 'Medicamentos em uso (imunossupressores, quimioterápicos, AINEs)'],
-                                correctAnswers: ['Histórico de doenças hematológicas (anemias prévias, doenças da medula óssea)', 'Doenças infecciosas crônicas (tuberculose, HIV, hepatites)', 'Doenças autoimunes', 'Doenças oncológicas', 'Cirurgias anteriores (esplenectomia, abdominais)', 'Medicamentos em uso (imunossupressores, quimioterápicos, AINEs)'],
-                                feedback: `O histórico médico é vital para o diagnóstico diferencial. Doenças hematológicas prévias, infecções crônicas (que podem causar linfadenopatias e hepatoesplenomegalia), doenças autoimunes e oncológicas são importantes. Cirurgias (especialmente esplenectomia) e uso de medicamentos (imunossupressores, quimioterápicos, AINEs) também fornecem pistas cruciais.`
+                                options: [
+                                    'Histórico de doenças hematológicas (anemias prévias, doenças da medula óssea)',
+                                    'Doenças infecciosas crônicas (tuberculose, HIV, hepatites)',
+                                    'Histórico de fraturas ósseas', // Opção errada
+                                    'Doenças autoimunes',
+                                    'Doenças oncológicas',
+                                    'Cirurgias anteriores (esplenectomia, abdominais)',
+                                    'Uso de óculos ou lentes de contato', // Opção errada
+                                    'Medicamentos em uso (imunossupressores, quimioterápicos, AINEs)',
+                                    'Histórico de cáries dentárias' // Opção errada
+                                ],
+                                correctAnswers: [
+                                    'Histórico de doenças hematológicas (anemias prévias, doenças da medula óssea)',
+                                    'Doenças infecciosas crônicas (tuberculose, HIV, hepatites)',
+                                    'Doenças autoimunes',
+                                    'Doenças oncológicas',
+                                    'Cirurgias anteriores (esplenectomia, abdominais)',
+                                    'Medicamentos em uso (imunossupressores, quimioterápicos, AINEs)'
+                                ],
+                                feedback: `O histórico médico é vital para o diagnóstico diferencial. Doenças hematológicas prévias, infecções crônicas (que podem causar linfadenopatias e hepatoesplenomegalia), doenças autoimunes e oncológicas são importantes. Cirurgias (especialmente esplenectomia) e uso de medicamentos (imunossupressores, quimioterápicos, AINEs) também fornecem pistas cruciais. Histórico de fraturas ósseas, uso de óculos ou lentes de contato e histórico de cáries dentárias não são antecedentes médicos preexistentes cruciais para a investigação deste caso.`
                             },
                             {
                                 id: 'antecedents-lifestyle',
                                 type: 'checkbox',
                                 prompt: 'Quais hábitos de vida e exposições relacionadas à ocupação você questionaria?',
-                                options: ['Consumo de álcool', 'Tabagismo', 'Exposição a substâncias químicas ou tóxicas (relacionado à ocupação de mecânico)', 'Viagens recentes para áreas endêmicas'],
-                                correctAnswers: ['Consumo de álcool', 'Tabagismo', 'Exposição a substâncias químicas ou tóxicas (relacionado à ocupação de mecânico)', 'Viagens recentes para áreas endêmicas'],
-                                feedback: `Hábitos de vida como consumo de álcool (pode levar a hepatopatias e esplenomegalia) e tabagismo são relevantes. A ocupação de mecânico sugere a necessidade de investigar exposição a substâncias químicas ou tóxicas. Viagens para áreas endêmicas são cruciais para doenças infecciosas como leishmaniose e esquistossomose.`
+                                options: [
+                                    'Consumo de álcool',
+                                    'Preferência por esportes aquáticos', // Opção errada
+                                    'Tabagismo',
+                                    'Exposição a substâncias químicas ou tóxicas (relacionado à ocupação de mecânico)',
+                                    'Número de horas de sono por noite', // Opção errada
+                                    'Viagens recentes para áreas endêmicas',
+                                    'Frequência de visitas ao dentista' // Opção errada
+                                ],
+                                correctAnswers: [
+                                    'Consumo de álcool', 'Tabagismo', 'Exposição a substâncias químicas ou tóxicas (relacionado à ocupação de mecânico)', 'Viagens recentes para áreas endêmicas'
+                                ],
+                                feedback: `Hábitos de vida como consumo de álcool (pode levar a hepatopatias e esplenomegalia) e tabagismo são relevantes. A ocupação de mecânico sugere a necessidade de investigar exposição a substâncias químicas ou tóxicas. Viagens para áreas endêmicas são cruciais para doenças infecciosas como leishmaniose e esquistossomose. Preferência por esportes aquáticos, número de horas de sono por noite e frequência de visitas ao dentista não são hábitos de vida ou exposições relacionadas à ocupação relevantes para a investigação deste caso.`
                             }
                         ]
                     },
@@ -423,196 +480,6 @@
                                     - **Tuberculose (formas disseminadas):** Pode causar linfadenopatias e esplenomegalia, com sintomas B.
                                     - **HIV:** Pode apresentar linfadenopatia generalizada persistente e hepatoesplenomegalia.
                                     - **Leishmaniose Visceral (Calazar):** Endêmica em algumas regiões, causa hepatoesplenomegalia maciça, febre, fraqueza e linfadenopatias.
-                                    - **Esquistossomose:** Em áreas endêmicas, pode levar à hepatoesplenomegalia.
-                                - **Doenças Autoimunes:** Sarcoidose (raro, mas pode causar linfadenopatias).
-
-                                **Observação:** A fraqueza e adinamia são sintomas inespecíficos, mas no contexto das linfadenopatias e hepatoesplenomegalia, sugerem uma doença sistêmica subjacente, sendo as hematológicas as mais prováveis, exigindo investigação aprofundada.`
-                            }
-                        ]
-                    }
-                ]
-            },
-            'case02': {
-                id: 'PSS, 54 anos, sexo masculino, mecânico, natural e procedente de Barbalha.',
-                qp: 'fraqueza há 4 meses',
-                hda: 'Paciente refere que há cerca de 4 meses vem apresentando dor abdominal e adinamia intensa. Relatava ainda surgimento de várias nodulações em região cervical, de crescimento progressivo',
-                ef: 'O exame inicial evidenciou paciente em bom estado geral, corado, hidratado, anictérico, acianótico, afebril, eupneico, consciente e orientado. Pressão arterial de 150×90 mmHg e frequência cardíaca de 68 bpm. Exame cardíaco e pulmonar apresentavam-se normais. Ao exame de abdome apresentou esplenomegalia palpável à 10 cm do rebordo costal esquerdo; hepatomegalia palpável à 7 cm do rebordo costal direito. Linfadenopatias palpáveis e visíveis nas cadeias ganglionares cervicais, supraclaviculares, axilares e inguinais.',
-                sections: [
-                    {
-                        title: 'Questão 1: Complementando a HDA',
-                        subQuestions: [
-                            {
-                                id: 'hda-pain',
-                                type: 'checkbox',
-                                prompt: 'Quais características da dor abdominal você investigaria para complementar a HDA?',
-                                options: ['Localização exata', 'Irradiação', 'Tipo (cólica, queimação, pontada)', 'Intensidade (escala de 0-10)', 'Fatores de melhora/piora (relação com alimentação, evacuação)', 'Sintomas associados (náuseas, vômitos, diarreia, constipação, alteração do hábito intestinal, melena, hematoquezia)'],
-                                correctAnswers: ['Localização exata', 'Irradiação', 'Tipo (cólica, queimação, pontada)', 'Intensidade (escala de 0-10)', 'Fatores de melhora/piora (relação com alimentação, evacuação)', 'Sintomas associados (náuseas, vômitos, diarreia, constipação, alteração do hábito intestinal, melena, hematoquezia)'],
-                                feedback: `A caracterização completa da dor abdominal é essencial para direcionar a investigação. A localização e irradiação podem indicar o órgão afetado. O tipo e a intensidade ajudam a diferenciar causas. A relação com alimentação ou evacuação, e sintomas associados, são pistas importantes para distúrbios gastrointestinais ou sistêmicos.`
-                            },
-                            {
-                                id: 'hda-nodules',
-                                type: 'checkbox',
-                                prompt: 'Quais perguntas sobre as nodulações cervicais são essenciais para a HDA?',
-                                options: ['Início e duração', 'Progressão do crescimento (rápido/lento)', 'Número de nodulações', 'Presença de dor', 'Consistência (macia, elástica, endurecida)', 'Mobilidade (fixa ou móvel)', 'Presença de outras nodulações em outras regiões do corpo'],
-                                correctAnswers: ['Início e duração', 'Progressão do crescimento (rápido/lento)', 'Número de nodulações', 'Presença de dor', 'Consistência (macia, elástica, endurecida)', 'Mobilidade (fixa ou móvel)', 'Presença de outras nodulações em outras regiões do corpo'],
-                                feedback: `A investigação das nodulações é crucial para diferenciar causas benignas de malignas. O crescimento rápido e a consistência endurecida/fixa podem sugerir malignidade. O presença de dor pode indicar inflamação. A busca por outras nodulações (linfadenopatias generalizadas) é vital para doenças sistêmicas como linfomas.`
-                            },
-                            {
-                                id: 'hda-systemic',
-                                type: 'textarea',
-                                prompt: 'Quais outros sintomas sistêmicos (como sintomas B) e exposições você investigaria?',
-                                keywords: ['febre', 'sudorese noturna', 'perda de peso', 'prurido', 'tosse', 'exposição química', 'radiação', 'infecções crônicas'],
-                                feedback: `É fundamental investigar:
-                                - **Sintomas B:** Febre (padrão, duração), sudorese noturna (intensa, que encharca a roupa), perda de peso involuntária (quantificar). Esses sintomas são clássicos de doenças linfoproliferativas.
-                                - **Outros sintomas sistêmicos:** Prurido (pode ser associado a linfomas), tosse, dispneia, saciedade precoce (devido à esplenomegalia).
-                                - **Exposição:** Histórico de exposição a agentes químicos, radiação (relacionado à ocupação de mecânico), infecções crônicas (tuberculose, HIV, hepatites), viagens (para áreas endêmicas de leishmaniose, esquistossomose).`
-                            }
-                        ]
-                    },
-                    {
-                        title: 'Questão 2: Investigando os Antecedentes',
-                        subQuestions: [
-                            {
-                                id: 'antecedents-medical-history',
-                                type: 'checkbox',
-                                prompt: 'Quais antecedentes médicos preexistentes são cruciais para a investigação deste caso?',
-                                options: ['Histórico de doenças hematológicas (anemias prévias, doenças da medula óssea)', 'Doenças infecciosas crônicas (tuberculose, HIV, hepatites)', 'Doenças autoimunes', 'Doenças oncológicas', 'Cirurgias anteriores (esplenectomia, abdominais)', 'Medicamentos em uso (imunossupressores, quimioterápicos, AINEs)'],
-                                correctAnswers: ['Histórico de doenças hematológicas (anemias prévias, doenças da medula óssea)', 'Doenças infecciosas crônicas (tuberculose, HIV, hepatites)', 'Doenças autoimunes', 'Doenças oncológicas', 'Cirurgias anteriores (esplenectomia, abdominais)', 'Medicamentos em uso (imunossupressores, quimioterápicos, AINEs)'],
-                                feedback: `O histórico médico é vital para o diagnóstico diferencial. Doenças hematológicas prévias, infecções crônicas (que podem causar linfadenopatias e hepatoesplenomegalia), doenças autoimunes e oncológicas são importantes. Cirurgias (especialmente esplenectomia) e uso de medicamentos (imunossupressores, quimioterápicos, AINEs) também fornecem pistas cruciais.`
-                            },
-                            {
-                                id: 'antecedents-lifestyle',
-                                type: 'checkbox',
-                                prompt: 'Quais hábitos de vida e exposições relacionadas à ocupação você questionaria?',
-                                options: ['Consumo de álcool', 'Tabagismo', 'Exposição a substâncias químicas ou tóxicas (relacionado à ocupação de mecânico)', 'Viagens recentes para áreas endêmicas'],
-                                correctAnswers: ['Consumo de álcool', 'Tabagismo', 'Exposição a substâncias químicas ou tóxicas (relacionado à ocupação de mecânico)', 'Viagens recentes para áreas endêmicas'],
-                                feedback: `Hábitos de vida como consumo de álcool (pode levar a hepatopatias e esplenomegalia) e tabagismo são relevantes. A ocupação de mecânico sugere a necessidade de investigar exposição a substâncias químicas ou tóxicas. Viagens para áreas endêmicas são cruciais para doenças infecciosas como leishmaniose e esquistossomose.`
-                            }
-                        ]
-                    },
-                    {
-                        title: 'Questão 3: Hipótese e Diagnóstico',
-                        subQuestions: [
-                            {
-                                id: 'hypothesis-syndrome-2',
-                                type: 'radio',
-                                prompt: 'Qual é a principal hipótese sindrômica para o paciente, considerando linfadenopatias generalizadas, hepatoesplenomegalia e sintomas sistêmicos?',
-                                options: ['Síndrome Anêmica', 'Síndrome Linfoproliferativa/Mieloproliferativa', 'Síndrome Dolorosa Abdominal', 'Síndrome de Má Absorção'],
-                                correctAnswer: 'Síndrome Linfoproliferativa/Mieloproliferativa',
-                                feedback: `A presença de linfadenopatias generalizadas e hepatoesplenomegalia, juntamente com sintomas sistêmicos como fraqueza e adinamia, aponta fortemente para uma Síndrome Linfoproliferativa/Mieloproliferativa. A dor abdominal é um sintoma associado, mas não a síndrome principal que engloba o quadro.`
-                            },
-                            {
-                                id: 'hypothesis-etiology-2',
-                                type: 'textarea',
-                                prompt: 'Formule a hipótese sindrômica completa e pesquise possíveis diagnósticos etiológicos para o caso apresentado, justificando a escolha.',
-                                keywords: ['linfoma', 'leucemia', 'mielofibrose', 'mononucleose', 'tuberculose', 'hiv', 'leishmaniose', 'esquistossomose'],
-                                feedback: `**Hipótese Sindrômica Principal:** Síndrome Linfoproliferativa/Mieloproliferativa (devido a linfadenopatias generalizadas, hepatoesplenomegalia e sintomas sistêmicos como fraqueza e adinamia).
-
-                                **Possíveis Diagnósticos Etiológicos (para pesquisa e justificativa):**
-                                - **Neoplasias Hematológicas:**
-                                    - **Linfomas (Hodgkin e Não-Hodgkin):** São as principais causas de linfadenopatias generalizadas e hepatoesplenomegalia, frequentemente associadas a sintomas B (febre, sudorese noturna, perda de peso) e adinamia.
-                                    - **Leucemias (Linfoides Crônicas, Mieloides Crônicas):** Podem cursar com linfadenopatias e hepatoesplenomegalia significativas, além de sintomas constitucionais.
-                                    - **Mielofibrose:** Caracterizada por esplenomegalia maciça e sintomas constitucionais, pode ser uma consideração.
-                                - **Doenças Infecciosas:**
-                                    - **Mononucleose Infecciosa:** Causa linfadenopatia e hepatoesplenomegalia, mas geralmente em pacientes mais jovens e com quadro agudo.
-                                    - **Tuberculose (formas disseminadas):** Pode causar linfadenopatias e esplenomegalia, com sintomas B.
-                                    - **HIV:** Pode apresentar linfadenopatia generalizada persistente e hepatoesplenomegalia.
-                                    - **Leishmaniose Visceral (Calazar):** Endêmica em algumas regiões, causa hepatoesplenomegalia maciça, febre, fraqueza e linfadenopatias.
-                                    - **Esquistossomose:** Em áreas endêmicas, pode levar à hepatoesplenomegalia.
-                                - **Doenças Autoimunes:** Sarcoidose (raro, mas pode causar linfadenopatias).
-
-                                **Observação:** A fraqueza e adinamia são sintomas inespecíficos, mas no contexto das linfadenopatias e hepatoesplenomegalia, sugerem uma doença sistêmica subjacente, sendo as hematológicas as mais prováveis, exigindo investigação aprofundada.`
-                            }
-                        ]
-                    }
-                ]
-            },
-            'case02': {
-                id: 'PSS, 54 anos, sexo masculino, mecânico, natural e procedente de Barbalha.',
-                qp: 'fraqueza há 4 meses',
-                hda: 'Paciente refere que há cerca de 4 meses vem apresentando dor abdominal e adinamia intensa. Relatava ainda surgimento de várias nodulações em região cervical, de crescimento progressivo',
-                ef: 'O exame inicial evidenciou paciente em bom estado geral, corado, hidratado, anictérico, acianótico, afebril, eupneico, consciente e orientado. Pressão arterial de 150×90 mmHg e frequência cardíaca de 68 bpm. Exame cardíaco e pulmonar apresentavam-se normais. Ao exame de abdome apresentou esplenomegalia palpável à 10 cm do rebordo costal esquerdo; hepatomegalia palpável à 7 cm do rebordo costal direito. Linfadenopatias palpáveis e visíveis nas cadeias ganglionares cervicais, supraclaviculares, axilares e inguinais.',
-                sections: [
-                    {
-                        title: 'Questão 1: Complementando a HDA',
-                        subQuestions: [
-                            {
-                                id: 'hda-pain',
-                                type: 'checkbox',
-                                prompt: 'Quais características da dor abdominal você investigaria para complementar a HDA?',
-                                options: ['Localização exata', 'Irradiação', 'Tipo (cólica, queimação, pontada)', 'Intensidade (escala de 0-10)', 'Fatores de melhora/piora (relação com alimentação, evacuação)', 'Sintomas associados (náuseas, vômitos, diarreia, constipação, alteração do hábito intestinal, melena, hematoquezia)'],
-                                correctAnswers: ['Localização exata', 'Irradiação', 'Tipo (cólica, queimação, pontada)', 'Intensidade (escala de 0-10)', 'Fatores de melhora/piora (relação com alimentação, evacuação)', 'Sintomas associados (náuseas, vômitos, diarreia, constipação, alteração do hábito intestinal, melena, hematoquezia)'],
-                                feedback: `A caracterização completa da dor abdominal é essencial para direcionar a investigação. A localização e irradiação podem indicar o órgão afetado. O tipo e a intensidade ajudam a diferenciar causas. A relação com alimentação ou evacuação, e sintomas associados, são pistas importantes para distúrbios gastrointestinais ou sistêmicos.`
-                            },
-                            {
-                                id: 'hda-nodules',
-                                type: 'checkbox',
-                                prompt: 'Quais perguntas sobre as nodulações cervicais são essenciais para a HDA?',
-                                options: ['Início e duração', 'Progressão do crescimento (rápido/lento)', 'Número de nodulações', 'Presença de dor', 'Consistência (macia, elástica, endurecida)', 'Mobilidade (fixa ou móvel)', 'Presença de outras nodulações em outras regiões do corpo'],
-                                correctAnswers: ['Início e duração', 'Progressão do crescimento (rápido/lento)', 'Número de nodulações', 'Presença de dor', 'Consistência (macia, elástica, endurecida)', 'Mobilidade (fixa ou móvel)', 'Presença de outras nodulações em outras regiões do corpo'],
-                                feedback: `A investigação das nodulações é crucial para diferenciar causas benignas de malignas. O crescimento rápido e a consistência endurecida/fixa podem sugerir malignidade. O presença de dor pode indicar inflamação. A busca por outras nodulações (linfadenopatias generalizadas) é vital para doenças sistêmicas como linfomas.`
-                            },
-                            {
-                                id: 'hda-systemic',
-                                type: 'textarea',
-                                prompt: 'Quais outros sintomas sistêmicos (como sintomas B) e exposições você investigaria?',
-                                keywords: ['febre', 'sudorese noturna', 'perda de peso', 'prurido', 'tosse', 'exposição química', 'radiação', 'infecções crônicas'],
-                                feedback: `É fundamental investigar:
-                                - **Sintomas B:** Febre (padrão, duração), sudorese noturna (intensa, que encharca a roupa), perda de peso involuntária (quantificar). Esses sintomas são clássicos de doenças linfoproliferativas.
-                                - **Outros sintomas sistêmicos:** Prurido (pode ser associado a linfomas), tosse, dispneia, saciedade precoce (devido à esplenomegalia).
-                                - **Exposição:** Histórico de exposição a agentes químicos, radiação (relacionado à ocupação de mecânico), infecções crônicas (tuberculose, HIV, hepatites), viagens (para áreas endêmicas de leishmaniose, esquistossomose).`
-                            }
-                        ]
-                    },
-                    {
-                        title: 'Questão 2: Investigando os Antecedentes',
-                        subQuestions: [
-                            {
-                                id: 'antecedents-medical-history',
-                                type: 'checkbox',
-                                prompt: 'Quais antecedentes médicos preexistentes são cruciais para a investigação deste caso?',
-                                options: ['Histórico de doenças hematológicas (anemias prévias, doenças da medula óssea)', 'Doenças infecciosas crônicas (tuberculose, HIV, hepatites)', 'Doenças autoimunes', 'Doenças oncológicas', 'Cirurgias anteriores (esplenectomia, abdominais)', 'Medicamentos em uso (imunossupressores, quimioterápicos, AINEs)'],
-                                correctAnswers: ['Histórico de doenças hematológicas (anemias prévias, doenças da medula óssea)', 'Doenças infecciosas crônicas (tuberculose, HIV, hepatites)', 'Doenças autoimunes', 'Doenças oncológicas', 'Cirurgias anteriores (esplenectomia, abdominais)', 'Medicamentos em uso (imunossupressores, quimioterápicos, AINEs)'],
-                                feedback: `O histórico médico é vital para o diagnóstico diferencial. Doenças hematológicas prévias, infecções crônicas (que podem causar linfadenopatias e hepatoesplenomegalia), doenças autoimunes e oncológicas são importantes. Cirurgias (especialmente esplenectomia) e uso de medicamentos (imunossupressores, quimioterápicos, AINEs) também fornecem pistas cruciais.`
-                            },
-                            {
-                                id: 'antecedents-lifestyle',
-                                type: 'checkbox',
-                                prompt: 'Quais hábitos de vida e exposições relacionadas à ocupação você questionaria?',
-                                options: ['Consumo de álcool', 'Tabagismo', 'Exposição a substâncias químicas ou tóxicas (relacionado à ocupação de mecânico)', 'Viagens recentes para áreas endêmicas'],
-                                correctAnswers: ['Consumo de álcool', 'Tabagismo', 'Exposição a substâncias químicas ou tóxicas (relacionado à ocupação de mecânico)', 'Viagens recentes para áreas endêmicas'],
-                                feedback: `Hábitos de vida como consumo de álcool (pode levar a hepatopatias e esplenomegalia) e tabagismo são relevantes. A ocupação de mecânico sugere a necessidade de investigar exposição a substâncias químicas ou tóxicas. Viagens para áreas endêmicas são cruciais para doenças infecciosas como leishmaniose e esquistossomose.`
-                            }
-                        ]
-                    },
-                    {
-                        title: 'Questão 3: Hipótese e Diagnóstico',
-                        subQuestions: [
-                            {
-                                id: 'hypothesis-syndrome-2',
-                                type: 'radio',
-                                prompt: 'Qual é a principal hipótese sindrômica para o paciente, considerando linfadenopatias generalizadas, hepatoesplenomegalia e sintomas sistêmicos?',
-                                options: ['Síndrome Anêmica', 'Síndrome Linfoproliferativa/Mieloproliferativa', 'Síndrome Dolorosa Abdominal', 'Síndrome de Má Absorção'],
-                                correctAnswer: 'Síndrome Linfoproliferativa/Mieloproliferativa',
-                                feedback: `A presença de linfadenopatias generalizadas e hepatoesplenomegalia, juntamente com sintomas sistêmicos como fraqueza e adinamia, aponta fortemente para uma Síndrome Linfoproliferativa/Mieloproliferativa. A dor abdominal é um sintoma associado, mas não a síndrome principal que engloba o quadro.`
-                            },
-                            {
-                                id: 'hypothesis-etiology-2',
-                                type: 'textarea',
-                                prompt: 'Formule a hipótese sindrômica completa e pesquise possíveis diagnósticos etiológicos para o caso apresentado, justificando a escolha.',
-                                keywords: ['linfoma', 'leucemia', 'mielofibrose', 'mononucleose', 'tuberculose', 'hiv', 'leishmaniose', 'esquistossomose'],
-                                feedback: `**Hipótese Sindrômica Principal:** Síndrome Linfoproliferativa/Mieloproliferativa (devido a linfadenopatias generalizadas, hepatoesplenomegalia e sintomas sistêmicos como fraqueza e adinamia).
-
-                                **Possíveis Diagnósticos Etiológicos (para pesquisa e justificativa):**
-                                - **Neoplasias Hematológicas:**
-                                    - **Linfomas (Hodgkin e Não-Hodgkin):** São as principais causas de linfadenopatias generalizadas e hepatoesplenomegalia, frequentemente associadas a sintomas B (febre, sudorese noturna, perda de peso) e adinamia.
-                                    - **Leucemias (Linfoides Crônicas, Mieloides Crônicas):** Podem cursar com linfadenopatias e hepatoesplenomegalia significativas, além de sintomas constitucionais.
-                                    - **Mielofibrose:** Caracterizada por esplenomegalia maciça e sintomas constitucionais, pode ser uma consideração.
-                                - **Doenças Infecciosas:**
-                                    - **Mononucleose Infecciosa:** Causa linfadenopatia e hepatoesplenomegalia, mas geralmente em pacientes mais jovens e com quadro agudo.
-                                    - **Tuberculose (formas disseminadas):** Pode causar linfadenopatias e esplenomegalia, com sintomas B.
-                                    - **HIV:** Pode apresentar linfadenopatia generalizada persistente e hepatoesplenomegalia.
-                                    - **Leishmaniose Visceral (Calazar):
                                     - **Esquistossomose:** Em áreas endêmicas, pode levar à hepatoesplenomegalia.
                                 - **Doenças Autoimunes:** Sarcoidose (raro, mas pode causar linfadenopatias).
 
