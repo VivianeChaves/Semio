@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casos Clínicos Interativos de Semiologia</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-J5N7Y0QCCM'); 
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -156,7 +164,7 @@
                 id: 'FCA, 48 anos, sexo feminino, professora, residente em Barbalha.',
                 qp: 'fraqueza há 4 meses',
                 hda: 'Paciente queixa-se de fraqueza e desânimo há aproximadamente 4 meses, o que tem prejudicado seu desempenho no trabalho e nas tarefas do dia a dia. Neste período notou também dispnéia aos esforços, ficando, por exemplo, muito cansada ao subir escadas.',
-                ef: 'PA = 120/80 mmHg FC = 90 bpm TA = 36,5oC. Fácies atípica, bom estado geral, mucosas hipocoradas (++/4+), hidratada, anictérica, acianótica, afebril. Linfonodos não palpáveis. Sem edemas. AP : murmúlio vesicular fisiológico. Ausência de ruídos adventícios. AC: ritmo regular, em 2T, bulhas normofonéticas, sem sopros. Abdome: normotenso, presença de massa palpável no hipogástrio, indolor, endurecida, móvel, com cerca de 6 cm de diâmetro. Fígado e baço não palpáveis.',
+                ef: 'PA = 120/80 mmHg FC = 90 bpm TA = 36,5oC. Fácies atípica, bom estado geral, mucosas hipocoradas (++/4+), hidratada, anictérica, acianótica, afebril. Linfonodos não palpáveis. Sem edemas. AP : murmúrio vesicular fisiológico. Ausência de ruídos adventícios. AC: ritmo regular, em 2T, bulhas normofonéticas, sem sopros. Abdome: normotenso, presença de massa palpável no hipogástrio, indolor, endurecida, móvel, com cerca de 6 cm de diâmetro. Fígado e baço não palpáveis.',
                 sections: [
                     {
                         title: 'Questão 1: Complementando a HDA',
@@ -263,7 +271,7 @@
                             },
                             {
                                 id: 'hypothesis-etiology-diagnosis',
-                                type: 'checkbox',
+                                type: 'radio', /* Changed from checkbox to radio */
                                 prompt: 'Qual(is) o(s) diagnóstico(s) etiológico(s) mais provável(is) para a anemia e a massa abdominal neste caso?',
                                 options: [
                                     'Anemia Ferropriva secundária à menorragia por mioma uterino',
@@ -271,7 +279,7 @@
                                     'Anemia de Doença Crônica e endometriose',
                                     'Anemia Ferropriva por má absorção e pólipo intestinal'
                                 ],
-                                correctAnswers: ['Anemia Ferropriva secundária à menorragia por mioma uterino'],
+                                correctAnswer: 'Anemia Ferropriva secundária à menorragia por mioma uterino', /* Changed from array to string */
                                 feedback: `A combinação de anemia ferropriva (sugerida pelos sintomas e palidez), menorragia (fluxo menstrual intenso) e a presença de uma massa abdominal palpável em hipogástrio é altamente sugestiva de **Anemia Ferropriva secundária à menorragia por mioma uterino**. Miomas são tumores benignos comuns no útero que podem causar sangramento excessivo.`
                             },
                             {
